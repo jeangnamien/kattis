@@ -1,9 +1,14 @@
 # Kattis Solutions
 
-[![Tests and Coverage](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/tests.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/tests.yml)
-[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/YOUR_USERNAME/YOUR_GIST_ID/raw/kattis-coverage.json)](https://gist.github.com/YOUR_USERNAME/YOUR_GIST_ID)
+[![Tests and Coverage](https://github.com/jeangnamien/jeangnamien.github.io/actions/workflows/tests-and-coverage.yml/badge.svg)](https://github.com/jeangnamien/jeangnamien.github.io/actions/workflows/tests-and-coverage.yml)
+[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jeangnamien/ad3e75bc84d929dbe2f7173a79ccf193/raw/kattis-coverage.json)](https://gist.github.com/jeangnamien/ad3e75bc84d929dbe2f7173a79ccf193)
 
 Collection of solutions to Kattis programming problems.
+
+## Setup
+To install dependencies:
+```bash
+poetry install
 
 ## Setup
 ```bash
