@@ -22,4 +22,15 @@ pytest = ">=9.0.1,<10.0.0"
 coverage = ">=7.12.0,<8.0.0"
 pylint = "^4.0.3"
 black = "^25.11.0"
+marimo = "^0.18.1"
 
+[tool.marimo.ai]
+rules = "- prefer matplotlib/seaborn for plots\n- keep code simple and readable"
+
+[tool.marimo.save]
+autosave = "after_delay"
+autosave_delay = 1000
+format_on_save = true
+
+[tool.marimo.package_management]
+manager = "poetry"

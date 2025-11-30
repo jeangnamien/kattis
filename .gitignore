@@ -39,3 +39,11 @@ htmlcov/
 .DS_Store
 Thumbs.db
 "@ | Out-File -FilePath .gitignore -Encoding utf8
+
+echo. >> .gitignore
+echo 
+echo .marimo/ >> .gitignore
+echo __marimo__/ >> .gitignore
+# Marimo
+.marimo/
+__marimo__/
