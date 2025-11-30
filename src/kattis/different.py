@@ -1,5 +1,7 @@
 """Solution for Kattis problem."""
+
 import sys
+
 
 def absolute_difference(a, b):
     """
@@ -15,9 +17,6 @@ def absolute_difference(a, b):
         int: Absolute difference |a - b|
     """
     return abs(a - b)
-
-
-
 
 
 def main():

@@ -1,7 +1,6 @@
 """Solution for Kattis problem."""
 
 
-
 def acappella(n, d, pitches):
     """
     Compute the minimum number of recordings needed.

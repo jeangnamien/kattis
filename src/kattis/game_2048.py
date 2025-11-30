@@ -1,5 +1,6 @@
 """Solution for Kattis problem."""
 
+
 def merge_line(line):
     """
     Merge a single line according to 2048 rules.
