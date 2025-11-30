@@ -1,8 +1,11 @@
+"""Solution for Kattis problem."""
+
+
 def odd_echo():
     """
     Print every odd-indexed word from the input.
-    
-    Problem : https://open.kattis.com/problems/oddecho 
+
+    Problem : https://open.kattis.com/problems/oddecho
     """
     n = int(input())  # number of words
     words = [input().strip() for _ in range(n)]

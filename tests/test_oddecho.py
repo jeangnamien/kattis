@@ -1,6 +1,5 @@
 import io
 import sys
-import pytest
 from kattis.oddecho import odd_echo  # assuming your function is in odd_echo.py
 
 

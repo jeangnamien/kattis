@@ -1,36 +1,38 @@
+"""Solution for Kattis problem."""
+
 def merge_line(line):
     """
     Merge a single line according to 2048 rules.
-    
+
     Args:
         line (list): A list of 4 integers representing a row/column
-        
+
     Returns:
         list: The merged line
-        
+
     Problem : https://open.kattis.com/problems/2048
     """
     # Remove zeros
     non_zero = [num for num in line if num != 0]
-    
+
     merged = []
     skip = False
-    
-    for i in range(len(non_zero)):
+
+    for i, value in enumerate(non_zero):
         if skip:
             skip = False
             continue
-        if i + 1 < len(non_zero) and non_zero[i] == non_zero[i+1]:
+        if i + 1 < len(non_zero) and value == non_zero[i + 1]:
             # Merge two tiles
-            merged.append(non_zero[i] * 2)
+            merged.append(value * 2)
             skip = True
         else:
-            merged.append(non_zero[i])
-    
+            merged.append(value)
+
     # Pad with zeros
     while len(merged) < 4:
         merged.append(0)
-    
+
     return merged
 
 
@@ -63,24 +65,23 @@ def move_down(grid):
 def game_2048(grid, direction):
     """
     Execute a move in the 2048 game.
-    
+
     Args:
         grid (list): 4x4 grid
         direction (int): 0=left, 1=up, 2=right, 3=down
-        
+
     Returns:
         list: New grid after move
     """
     if direction == 0:
         return move_left(grid)
-    elif direction == 1:
+    if direction == 1:
         return move_up(grid)
-    elif direction == 2:
+    if direction == 2:
         return move_right(grid)
-    elif direction == 3:
+    if direction == 3:
         return move_down(grid)
-    else:
-        return grid  # invalid direction
+    return grid  # invalid direction
 
 
 def main():

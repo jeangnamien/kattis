@@ -1,12 +1,15 @@
+"""Solution for Kattis problem."""
+
+
 def thirteen_floors(floor: int) -> int:
     """
     Return the labeled floor number, skipping floor 13.
-    
+
     Problem: https://open.kattis.com/problems/13floors
-    
+
     Args:
         floor (int): True floor number (1-based)
-        
+
     Returns:
         int: Labeled floor number
     """

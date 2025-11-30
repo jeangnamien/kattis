@@ -1,5 +1,5 @@
-import pytest
 from kattis.different import absolute_difference
+
 
 def test_basic_cases():
     # simple examples

@@ -1,6 +1,6 @@
-import pytest
 import math
 from kattis.printed_statues import printed_statues
+
 
 class TestPrintedStatues:
     """Test the printed_statues function."""
@@ -32,6 +32,3 @@ class TestPrintedStatues:
         for n in range(1, 101):
             expected = math.ceil(math.log2(n)) + 1
             assert printed_statues(n) == expected, f"Failed for n={n}"
-
-if __name__ == "__main__":
-    pytest.main([__file__, "-v"])

@@ -1,10 +1,14 @@
+"""Solution for Kattis problem."""
+
+
+
 def acappella(n, d, pitches):
     """
     Compute the minimum number of recordings needed.
-    
+
     Notes do NOT need to be consecutive; only the pitch difference matters.
-    
-    Problem :https://open.kattis.com/problems/acappellarecording
+
+    Problem: https://open.kattis.com/problems/acappellarecording
     """
     if n == 0:
         return 0
@@ -26,11 +30,12 @@ def acappella(n, d, pitches):
     return recordings
 
 
-# Wrapper to run the function from stdin
 def main():
+    """Read input from stdin and print the computed result."""
     n, d = map(int, input().split())
     pitches = [int(input()) for _ in range(n)]
     print(acappella(n, d, pitches))
+
 
 if __name__ == "__main__":
     main()

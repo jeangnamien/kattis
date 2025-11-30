@@ -1,4 +1,3 @@
-import pytest
 from kattis.hissingmicrophone import hissing_microphone
 
 
@@ -34,6 +33,3 @@ class TestHissingMicrophone:
         # Maximum length example with 'ss' in the middle
         max_len_hiss = "a" * 49 + "ss" + "b" * 49
         assert hissing_microphone(max_len_hiss) == "hiss"
-
-if __name__ == "__main__":
-    pytest.main([__file__, "-v"])

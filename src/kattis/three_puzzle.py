@@ -1,3 +1,5 @@
+"""Solution for Kattis problem."""
+
 from collections import deque
 
 
@@ -28,12 +30,7 @@ def three_puzzle(grid):
     # Possible moves: (row_delta, col_delta)
     # For a 2x2 grid with positions: 0 1
     #                                2 3
-    directions = [
-        (0, 1),   # right
-        (0, -1),  # left
-        (1, 0),   # down
-        (-1, 0)   # up
-    ]
+    directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]  # right  # left  # down  # up
 
     # Helper function to convert position index to (row, col)
     def idx_to_pos(idx):
@@ -47,7 +44,7 @@ def three_puzzle(grid):
         state, steps = queue.popleft()  # ← Changé de moves à steps
 
         # Find the empty space position
-        empty_idx = state.index('-')
+        empty_idx = state.index("-")
         empty_row, empty_col = idx_to_pos(empty_idx)
 
         # Try all possible moves
@@ -61,8 +58,11 @@ def three_puzzle(grid):
 
                 # Create new state by swapping empty space with tile
                 state_list = list(state)
-                state_list[empty_idx], state_list[tile_idx] = state_list[tile_idx], state_list[empty_idx]
-                new_state = ''.join(state_list)
+                state_list[empty_idx], state_list[tile_idx] = (
+                    state_list[tile_idx],
+                    state_list[empty_idx],
+                )
+                new_state = "".join(state_list)
 
                 # Check if we reached the goal
                 if new_state == goal:
