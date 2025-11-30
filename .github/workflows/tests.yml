@@ -33,7 +33,16 @@ jobs:
         key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('poetry.lock') }}
 
     - name: Install dependencies
-      run: poetry install --no-interaction --with dev
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      run: poetry install --no-interaction
+
+    - name: Check code formatting with Black
+      run: |
+        poetry run black --check src tests
+
+    - name: Lint with PyLint
+      run: |
+        poetry run pylint src tests --fail-under=9.0
 
     - name: Run tests with coverage
       run: |
